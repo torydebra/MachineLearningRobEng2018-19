@@ -7,8 +7,8 @@ addpath('./mnist')
 %% Prepare data
 % extract training data from MNIST, second argument is to choose which
 % class extract (10 for handwritten 0)
-[trainA,labelTrainA] = loadMNIST(0,4);
-[trainB,labelTrainB] = loadMNIST(0,9);
+[trainA,labelTrainA] = loadMNIST(0,9);
+[trainB,labelTrainB] = loadMNIST(0,5);
 NTrainA = length(trainA(:,1));
 NTrainB = length(trainB(:,1));
 

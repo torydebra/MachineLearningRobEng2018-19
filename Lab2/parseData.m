@@ -14,7 +14,7 @@ for j = 1:ncol
     numbericValue = 1:length(uniq);
     
     for i = 1:length(numbericValue)
-        datamat = strrep(datamat, uniq(i), num2str(numbericValue(i)));
+        datamat(:,j) = strrep(datamat(:,j), uniq(i), num2str(numbericValue(i)));
     end
 end
 

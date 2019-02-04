@@ -46,15 +46,15 @@ end
 
 for ft = 1:nFeatTarg %ft : featTarg
     Nw(ft) = (sum(train(:,end) == ft));
-    P(ft) = Nw(ft) / nRowTrain;
+    P(ft) = Nw(ft) / nRowTrain; %prior probability
 
     for attr = 1:(nColTest -1) % attr: attribute (index for columns)
         for vattr = 1: length(unique(train(:,attr))) % vattr: value of the attribute attr (index for rows)
      
             equivalences = sum(train(:, [attr, end]) == [vattr, ft], 2);
-            % if equivalence == 2 there is a match between ft and vson.
+            % if equivalence == 2 there is a match between ft and vattr.
             % sum(equivalences == 2) is the number of observations in ft
-            % where attribute son has value vson
+            % (the class) where attribute attr has value vattr
             
             if lapla == 1
                 % trustiness and nlevel are the correction of the laplace

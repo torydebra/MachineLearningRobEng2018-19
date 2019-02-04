@@ -51,7 +51,7 @@ xlabel('Number of Neighbours')
 % each column of vsAll matrix will refer to a class, each row to a observation of
 % the test set. If vsAll(i,j) == 1, then observation i is classified as class j,
 % otherwise it is 0 and the observation isn't classified as class j,
-vsAll = zeros(nTest, nClass,nKNeighbours);
+vsAll = zeros(nTest, nClass, nKNeighbours);
 label = [1:nClass];
 
 for i = 1:nKNeighbours

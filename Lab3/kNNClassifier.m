@@ -47,7 +47,7 @@ for query = 1:nRowTest
     
     % Computationally is more efficent do the min() k times if
     % k<log2(nRowTrain) because using min complexity is O(nk), 
-    % instead complexity of sorting is O(nLog2(2)) 
+    % instead complexity of sorting is O(nLog2(nRowTrain)) 
     if k<log2(nRowTrain)
         for ki = 1:k
             [~,n(ki)] = min(norms);
